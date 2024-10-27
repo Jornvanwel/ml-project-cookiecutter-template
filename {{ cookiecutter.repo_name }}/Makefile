@@ -42,6 +42,7 @@ git-init:
 .PHONY: lock-file  ## Creates conda-lock file
 lock-file:
 	rm -rf conda-lock-dev.yml
+	$(CONDA_ACTIVATE_BASE) ; pip install conda-lock
 	$(CONDA_ACTIVATE_BASE) ; conda-lock --mamba -f env.yaml -f env-dev.yaml --lockfile conda-lock-dev.yml
 	git add conda-lock-dev.yml
 
