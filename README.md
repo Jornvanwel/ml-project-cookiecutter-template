@@ -66,6 +66,8 @@ Run:
 cookiecutter https://github.com/xultaeculcis/ml-project-cookiecutter
 ```
 
+Create the repository also in github to link the local to the remote.
+
 `cd` into your new project directory and then run:
 
 ```shell

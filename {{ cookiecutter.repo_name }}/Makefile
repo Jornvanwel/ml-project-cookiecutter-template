@@ -36,8 +36,11 @@ help:
 git-init:
 	git init -b main
 	git add .
-
-# Freezing dependedncies
+	git remote add origin https://github.com/Jornvanwel/$(CONDA_ENV_NAME).git
+	git branch -M main
+	git commit -m "Intialized cookiecutter template."
+	
+# Freezing dependencies
 
 .PHONY: lock-file  ## Creates conda-lock file
 lock-file:
